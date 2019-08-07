@@ -1,0 +1,15 @@
+version: '2'
+services:
+    SmokePing-speedtest:
+        image: smokeping-speedtest
+        container_name: smokeping-speedtest
+        ports:
+            - '8889:80'
+        volumes:
+            - "./config:/etc/smokeping/config.d:ro"
+            - "./logdata:/var/lib/smokeping:rw"
+        environment:
+            - TZ=America/Los_Angeles
+
+        ### Allows to auto-start with Docker
+        restart: always

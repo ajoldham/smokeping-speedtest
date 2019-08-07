@@ -1,0 +1,57 @@
+*** Targets ***
+
+probe = speedtest-download
+
+menu = Top
+title = Network Speedtest
+
+
++ multi-targets
+menu = Combined Download / Upload Stats
+title = Combined Download / Upload Stats
+
+    ++ multi-targets1
+    menu = Seattle - AT&T
+    title = Seattle - AT&T Server 5033
+    host = /speedtest/download-5033 /speedtest/upload-5033
+
+#
+# Run "speedtest-cli --list" to see closest servers
+#
+
++ speedtest
+menu = Download / Upload Stats
+title = Speedtest.net Download / Upload Stats
+
+++ download-5033
+menu = Download - Seattle - AT&T
+title = Download - Seattle - AT&T Server 5033
+probe = speedtest-download
+server = 5033
+measurement = download
+host = dummy.com
+
+++ upload-5033
+menu = Upload - Seattle - AT&T
+title = Upload - Seattle - AT&T Server 5033
+probe = speedtest-upload
+server = 5033
+measurement = upload
+host = dummy.com
+
+#++ download-1782
+#menu = Download - Seattle - Comcast
+#title = Download - Seattle - Comcast Server 1782
+#probe = speedtest-download
+#server = 1782
+#measurement = download
+#host = dummy.com
+
+#++ upload-1782
+#menu = Upload - Seattle - Comcast
+#title = Upload - Seattle - Comcast Server 1782
+#probe = speedtest-upload
+#server = 1782
+#measurement = upload
+#host = dummy.com
+

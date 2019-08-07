@@ -1,0 +1,15 @@
+*** Probes ***
+
++ speedtest
+binary = /usr/local/bin/speedtest-cli
+timeout = 60
+# Test every hour
+step = 3600
+offset = random
+pings = 3
+
+++ speedtest-download
+measurement = download
+
+++ speedtest-upload
+measurement = upload

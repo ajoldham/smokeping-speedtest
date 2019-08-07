@@ -1,0 +1,26 @@
+*** Database ***
+
+# 3 Pings every 5 seconds is the minimum setting currently allowed.
+#
+# This is just used for RRD database setup for Speedtest... don't think ping value matters :)
+pings = 3
+step = 600
+
+
+
+#  Total column = How many samples (step) kept in a series.
+#  If values are changed, need to also delete ../logdata so new files (with new size) are created.
+#  Some good explanation of RRD/RRA here: https://oss.oetiker.ch/rrdtool/doc/rrdcreate.en.html
+#
+#  Test values of Total (1008,   4320,  720 kept ~3 days with ping = 3 step = 5, 0.76MB per Target)
+#  Test values of Total (11008, 14320, 1720 kept ~? days with ping = 3 step = 5, 2.7MB per Target)
+
+# consfn mrhb steps total
+AVERAGE  0.5   1  11008
+AVERAGE  0.5  12  14320
+    MIN  0.5  12  14320
+    MAX  0.5  12  14320
+AVERAGE  0.5 144   1720
+    MAX  0.5 144   1720
+    MIN  0.5 144   1720
+
