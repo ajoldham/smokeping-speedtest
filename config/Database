@@ -4,7 +4,7 @@
 #
 # This is just used for RRD database setup for Speedtest... don't think ping value matters :)
 pings = 3
-step = 600
+step = 3600
 
 
 

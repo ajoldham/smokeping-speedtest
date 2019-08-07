@@ -2,7 +2,7 @@
 
 + speedtest
 binary = /usr/local/bin/speedtest-cli
-timeout = 60
+timeout = 120
 # Test every hour
 step = 3600
 offset = random
